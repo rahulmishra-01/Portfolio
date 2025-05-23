@@ -1,10 +1,16 @@
 :root{
+    --container-border:1px solid black;
     --container-width:1280px;
     --primary-color:skyblue;
     --links-color:black;
     --font-size-base:16px;
     --header-height:40px;
     --global-font-family:"Poppins",sans-serif;
+
+    /* Font Size */
+    --font-size-lg:3.4rem;
+    --font-size-md:1.5rem;
+    --font-size-sm:1rem;
 }
 *{
     margin: 0;
@@ -16,7 +22,7 @@ a{
     text-decoration: none;
 }
 header{
-    border: 1px solid black;
+    border: var(--container-border);
 }
 .container{
     display: flex;
@@ -30,7 +36,7 @@ header{
     max-width: var(--container-width);
     width: 100%;
     height: var(--header-height);
-    border: 1px solid black;
+    border: var(--container-border);
 }
 .sub-container ul{
     display: flex;
@@ -48,5 +54,160 @@ header{
     max-width: var(--container-width);
     width: 100%;
     height: calc(100vh - var(--header-height));
+    border: var(--container-border);
+}
+.hero .left-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border: var(--container-border);
+    width: 50%;
+}
+.hero h1{
+    border: var(--container-border);
+    font-size: var(--font-size-lg);
+}
+.hero p{
+    font-weight: 600;
+    color: rgb(110, 105, 105);
+}
+#profession{
+    font-size: var(--font-size-sm);
+    /* border: var(--container-border); */
+    font-weight: 600;
+    color: rgb(110, 105, 105);
+    /* margin-left: 100px; */
+}
+#hero-section-discription{
+    margin-top: 30px;
+}
+.button-container{
+    position: relative;
+}
+.button-container a{
+    border: var(--container-border);
+    padding: 12px 42px;
+    display: inline-block;
+    /* max-width: 120px; */
+    border-radius: 8px;
+    margin-top: 20px;
+    background: #000;
+    color: white;
+    font-weight: 600;
+}
+.button-container a:hover{
+    background: white;
+    color: black;
+    transition: 0.5s;
+
+}
+.projects{
+    max-width: var(--container-width);
+    width: 100%;
+    /* height: 100vh; */
+    border: var(--container-border);
+}
+
+.projects-card-container{
+    border: var(--container-border);
+    padding: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.projects-card-container .project-card{
+    /* border: var(--container-border); */
+    width: 280px;
+    height: 350px;
+    border-radius: 7px;
+    overflow: hidden;
+    padding: 1px;
+    box-shadow: 0 0 3px 0 rgb(95, 92, 92);
+}
+.project-card .project-card-image{
+    position: relative;
+    border: var(--container-border);
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    background-image: url('https://images.unsplash.com/photo-1726064855857-46c37dc43c78?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8');
+    background-position: center;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+/* .project-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.project-image-filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000050;
+    /* z-index: 10; */
+}
+.project-card .project-contents{
+    position: absolute;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.274); */
+    height: 40%;
+    width: 100%;
+    padding: 10px;
+}
+.project-contents h3{
+    color: white;
+}
+.project-contents p{
+    color: white;
+    font-size: 0.7rem;
+}
+.project-contents button{
+    padding: 4px 16px;
+    margin-right: 2px;
+    font-size: 0.6rem;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+.projects-links{
+    position: absolute;
+    /* background: red; */
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hide{
+    display: none;
+}
+.projects-links a{
     border: 1px solid black;
+    padding: 9px 16px;
+    font-size: 0.7rem;
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.projects-links a:hover{
+    background: #000;
+    border: var(--container-border);
+}
+#project-card-menu-icon{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
 }
